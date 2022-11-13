@@ -39,7 +39,7 @@ export default function Index() {
   }
   return (
     <div style={{ fontFamily: 'system-ui, sans-serif', lineHeight: '1.4' }}>
-      <h1>Reload issue (yarn pnp)</h1>
+      <h1>Reload issue (NPM)</h1>
       <Test />
     </div>
   );
