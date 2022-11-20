@@ -6,8 +6,8 @@
   "scripts": {
     "build": "run-s 'build:*'",
     "build:remix": "remix build",
-    "build:server": "esbuild --platform=node --format=cjs ./server.ts --outdir=build --bundle",
-    "dev": "remix dev",
+    "dev": "remix dev --debug",
+    "start": "remix-serve build",
     "postinstall": "remix setup node"
   },
   "dependencies": {
@@ -22,6 +22,7 @@
     "@types/react": "^18.*",
     "@types/react-dom": "^18.*",
     "@yarnpkg/sdks": "^3.0.0-rc.28",
+    "npm-run-all": "^4.1.5",
     "typescript": "4.8.4"
   },
   "engines": {

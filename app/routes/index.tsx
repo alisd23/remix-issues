@@ -1,4 +1,4 @@
-import { useFetcher } from '@remix-run/react';
+import { useFetcher, Link } from '@remix-run/react';
 
 const Test = () => {
   const fetcher = useFetcher();
@@ -12,7 +12,7 @@ const Test = () => {
           <h2><code>fetcher.submit()</code></h2>
           <button
             onClick={() =>
-              fetcher.submit({ text: 'used fetcher.submit' }, { method: 'delete', action: '/action' })
+              fetcher.submit({ text: 'used fetcher.submit' }, { method: 'post', action: '/action' })
             }
           >
             Without form
@@ -29,6 +29,8 @@ const Test = () => {
       </div>
       <p>Should expect result below if page does not do a full reload</p>
       <div style={{ padding: 12, border: '1px solid black' }}><strong>Result:</strong> {fetcher.data?.text}</div>
+      <hr />
+      <Link to="/other">Navigate to other page</Link>
     </div>
   );
 };
