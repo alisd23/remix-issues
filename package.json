@@ -11,14 +11,14 @@
     "postinstall": "remix setup node"
   },
   "dependencies": {
-    "@remix-run/node": "1.16.0",
-    "@remix-run/react": "1.16.0",
-    "@remix-run/serve": "1.16.0",
+    "@remix-run/node": "1.17.1-pre.0",
+    "@remix-run/react": "1.17.1-pre.0",
+    "@remix-run/serve": "1.17.1-pre.0",
     "react": "^18.*",
     "react-dom": "^18.*"
   },
   "devDependencies": {
-    "@remix-run/dev": "1.16.0",
+    "@remix-run/dev": "1.17.1-pre.0",
     "@types/react": "^18.*",
     "@types/react-dom": "^18.*",
     "@yarnpkg/sdks": "^3.0.0-rc.43",
@@ -29,5 +29,8 @@
     "node": ">=14"
   },
   "sideEffects": false,
-  "packageManager": "yarn@3.5.1"
+  "packageManager": "yarn@3.6.0",
+  "resolutions": {
+    "modern-node-polyfills/esbuild": "0.18.0"
+  }
 }
