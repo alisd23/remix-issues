@@ -10,7 +10,7 @@
     "dev": "npm run build:server && run-p \"dev:*\"",
     "dev:server": "npm run build:server --watch",
     "dev:remix": "remix dev -c 'node --inspect ./build/server.js'",
-    "headless:dev": "remix dev"
+    "headless:dev": "remix dev -c 'node --inspect node_modules/.bin/remix-serve ./build/index.js'"
   },
   "dependencies": {
     "@remix-run/express": "^2.0.1",

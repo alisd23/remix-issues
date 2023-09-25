@@ -21,8 +21,9 @@ app.all(
   '*',
   (req, res, next) => {
     // The following sets multiple headers with same name correctly
-    res.append('Custom', 'one=1');
-    res.append('Custom', 'two=2');
+    // res.append('Custom', 'one=1');
+    // res.append('Custom', 'two=2');
+    // @remix-run/router => v1.9.0
 
     createRequestHandler({
       build,
