@@ -1,7 +1,10 @@
 import path from 'path';
 import express from 'express';
 import { createRequestHandler } from '@remix-run/express';
-import { broadcastDevReady } from '@remix-run/node';
+import { broadcastDevReady, installGlobals } from '@remix-run/node';
+
+/** @link https://remix.run/docs/en/main/start/v2#installglobals */
+installGlobals();
 
 const port = process.env.PORT ? Number(process.env.PORT) : 3000;
 
