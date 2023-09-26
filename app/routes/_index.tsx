@@ -1,5 +1,10 @@
 import { ActionFunction, json } from '@remix-run/node';
 import { Form, useActionData } from '@remix-run/react';
+import { Headers } from '@remix-run/web-fetch';
+
+if (typeof window === 'undefined') {
+  console.log('USING REMIX HEADERS IMPL?', (global.Headers as any) === Headers);
+}
 
 export const action: ActionFunction = async () => {
   const res = json('complete', {
